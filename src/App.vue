@@ -1,32 +1,67 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+
+    <div class="app-container">
+
+    	<HelloWorld />
+  		<router-view></router-view>
+		
+			
+
     </div>
-    <router-view/>
+
   </div>
 </template>
 
-<style lang="scss">
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import About from './views/About.vue'
+import Home from './views/Home.vue'
+import OurTeam from './views/OurTeam.vue'
+import Manage from './views/Manage.vue'
+
+
+
+
+
+export default {
+    data() {
+        return {
+            message: null,
+            text: null
+        }
+    },
+    methods: {
+        
+    },
+    components: {
+      HelloWorld,
+      About,
+      Home,
+      Manage,
+      OurTeam
+    }
+}
+</script>
+
+<style scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  margin-top: 60px;
 }
 
-#nav {
-  padding: 30px;
+.app-container {
+  text-align: center;
+}
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+body #app .p-button {
+  margin-left: .2em;
+}
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+form {
+  margin-top: 2em;
 }
 </style>
