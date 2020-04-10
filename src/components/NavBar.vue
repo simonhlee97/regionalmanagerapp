@@ -5,6 +5,9 @@
     	<li><router-link to="/">Home</router-link></li>
     	<li><router-link to="/about">About</router-link></li>
     	<li><router-link to="/team">Our Team</router-link></li>
+    	<li><router-link to="/manage">Micro Manage</router-link>
+    	</li>
+
     </ul>
     
   </div>
@@ -12,9 +15,9 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'NavBar',
   props: {
-    msg: String
+    
   }
 }
 </script>

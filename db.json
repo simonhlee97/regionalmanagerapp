@@ -1,0 +1,28 @@
+{
+  "todos": [
+    {
+      "id": 0,
+      "name": "Go to the gym"
+    },
+    {
+      "id": 1,
+      "name": "Walk the dog"
+    },
+    {
+      "id": 2,
+      "name": "Get some pizza"
+    },
+    {
+      "id": 3,
+      "name": "Study Javascript"
+    },
+    {
+      "id": 4,
+      "name": "Build VueJS apps"
+    },
+    {
+      "id": 5,
+      "name": "Call Dunder Mifflin"
+    }
+  ]
+}

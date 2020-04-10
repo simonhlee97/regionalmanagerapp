@@ -1,0 +1,77 @@
+{
+	"dunderteam": 
+	[
+	  {
+	    "id": 1,
+	    "name": "Toby Flenderson",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lepetitogre/128.jpg",
+	    "phone": "546.333.8845",
+	    "email": "toby@hotmail.com",
+	    "department": "hr"
+	  },
+	  {
+	    "id": 2,
+	    "name": "Kelly Kapoor",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/prheemo/128.jpg",
+	    "phone": "(446) 984-5172",
+	    "email": "Kelly@dunder.com",
+	    "department": "hr"
+	  },
+	  {
+	    "id": 3,
+	    "name": "Ryan Howard",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/demersdesigns/128.jpg",
+	    "phone": "1-248-467-9912",
+	    "email": "ryan@dunder.com",
+	    "department": "hr"
+	  },
+	  {
+	    "id": 4,
+	    "name": "Jim Halpert",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lepetitogre/128.jpg",
+	    "phone": "546.333.8845",
+	    "email": "jim@hotmail.com",
+	    "department": "sales"
+	  },
+	  {
+	    "id": 5,
+	    "name": "Andy Bernard",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/prheemo/128.jpg",
+	    "phone": "(446) 984-5172",
+	    "email": "narddog@dunder.com",
+	    "department": "sales"
+	  },
+	  {
+	    "id": 6,
+	    "name": "Dwight Schrute",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/demersdesigns/128.jpg",
+	    "phone": "1-248-467-9912",
+	    "email": "dwight@dunder.com",
+	    "department": "sales"
+	  },
+	  {
+	    "id": 7,
+	    "name": "Angela",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lepetitogre/128.jpg",
+	    "phone": "546.333.8845",
+	    "email": "angela@hotmail.com",
+	    "department": "accounting"
+	  },
+	  {
+	    "id": 8,
+	    "name": "Oscar Martinez",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/prheemo/128.jpg",
+	    "phone": "(446) 984-5172",
+	    "email": "oscar@dunder.com",
+	    "department": "accounting"
+	  },
+	  {
+	    "id": 9,
+	    "name": "Kevin Malone",
+	    "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/demersdesigns/128.jpg",
+	    "phone": "1-248-467-9912",
+	    "email": "kev@dunder.com",
+	    "department": "accounting"
+	  }
+	]
+}

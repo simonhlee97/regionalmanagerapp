@@ -3,7 +3,7 @@
 
     <div class="app-container">
 
-    	<HelloWorld />
+    	<NavBar />
   		<router-view></router-view>
 		
 			
@@ -14,32 +14,31 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import NavBar from './components/NavBar.vue'
 import About from './views/About.vue'
 import Home from './views/Home.vue'
 import OurTeam from './views/OurTeam.vue'
 import Manage from './views/Manage.vue'
-
-
+import Employee from '@/components/Employee.vue'
 
 
 
 export default {
     data() {
         return {
-            message: null,
-            text: null
+            
         }
     },
     methods: {
         
     },
     components: {
-      HelloWorld,
+      NavBar,
       About,
       Home,
       Manage,
-      OurTeam
+      OurTeam,
+      Employee
     }
 }
 </script>

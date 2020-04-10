@@ -1,59 +1,80 @@
 <template>
-<OrgChart :value="data">
-    <template #default="slotProps">
-        <span>{{slotProps.node.data.label}}</span>
-    </template>
-</OrgChart>
+	<div class="ourteam-page">
+	
+		<div class="dunder-app">
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Email</th>
+						<th>Phone</th>
+						<th>Department</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr v-for="employee in employees" :key="employee.id">
+						<td><router-link :to="'employee/' + employee.id">{{ employee.name  }}</router-link></td>
+						<td>{{ employee.email }}</td>
+						<td>{{ employee.phone }}</td>
+						<td>{{ employee.department }}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
 </template>
 
 <script>
-// import Vue from 'vue'
+const dunderUrl = "http://localhost:3000/dunderteam";
 
-// import OrganizationChart from 'primevue/organizationchart';
-// Vue.component('OrgChart', OrganizationChart);
 export default {
 	name: 'OurTeam',
     data() {
         return {
-            data: {
-                key: '0',
-                data: {label: 'Michael Scott'},
-                children: [
-                    {
-                        key: '0_0',
-                        data: {label: 'Dwight Schrute'},
-                        children: [
-                            {
-                                key: '0_0_0',
-                                data: {label: 'Chelsea F.C.'}
-                            },
-                            {
-                                key: '0_0_1',
-                                data: {label: 'F.C. Barcelona'}
-                            }
-                        ]
-                    },
-                    {
-                        key: '0_1',
-                        data: {label: 'Andy Bernard Nard Dog'},
-                        children: [
-                            {
-                                key: '0_1_0',
-                                data: {label: 'Stanley Hudson'}
-                            },
-                            {
-                                key: '0_1_1',
-                                data: {label: 'Kevin Malone'}
-                            }
-                        ]
-                    }
-                ]
-            }
+        	employees: [],
         }
+    },
+    
+    mounted() {
+    	fetch(dunderUrl)
+    		.then(res => {
+    			return res.json();
+    		})
+    		.then(data => {
+    			this.employees = data;
+    		})
     }
 }
 </script>
 
 <style lang="scss" scoped>
+	
+.dunder-app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #6c5ce7;
+  margin-top: 60px;
+}
 
+li {
+  list-style: none;
+}
+
+h1 {
+  color: #a29bfe
+}
+
+	table {
+		align: center;
+		width: 90%;
+		margin: 50px auto;
+		border: 1px solid black;
+	}
+	td {
+		padding: 8px;
+		border-collapse: separate;
+		border: 1px solid black;
+	}
 </style>
