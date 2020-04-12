@@ -5,6 +5,8 @@ import OurTeam from '../views/OurTeam.vue'
 import Manage from '../views/Manage.vue'
 import ProfilePage from '@/components/ProfilePage.vue'
 import Employee from '@/components/Employee.vue'
+import AddEmployee from '@/components/AddEmployee.vue'
+
 
 
 Vue.use(VueRouter)
@@ -25,11 +27,10 @@ Vue.use(VueRouter)
     name: 'ProfilePage',
     component: ProfilePage
   },
-  
   {
-    path: '/team',
-    name: 'OurTeam',
-    component: OurTeam
+    path: '/addemployee',
+    name: 'AddEmployee',
+    component: AddEmployee
   },
   {
     path: '/manage',

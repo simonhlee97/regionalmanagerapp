@@ -2,6 +2,21 @@
 	<div class="ourteam-page">
 	
 		<div class="dunder-app">
+			<div>
+				<Button 
+					:label="employee"
+					class="p-button-raised p-button-info"
+			        v-for="(employee, index) in filterList"
+			        :item="employee"
+			        :key="index"
+			        @click="
+			          filter = employee;
+			          active = index;
+			        "
+			        :class="{ active: employee == filter }"
+			     />
+	      	</div>
+
 			<table>
 				<thead>
 					<tr>
@@ -9,14 +24,45 @@
 						<th>Email</th>
 						<th>Phone</th>
 						<th>Department</th>
+						<th>Avatar</th>
+
 					</tr>
 				</thead>
 				<tbody>
-					<tr v-for="employee in employees" :key="employee.id">
+
+					<tr
+				        v-for="(employee, i) in employees"
+				        v-if="employee[fkey] === filter || filter === 'All'"
+				        :item="employee"
+				        :key="i"
+				        class="user"
+				    >
 						<td><router-link :to="'employee/' + employee.id">{{ employee.name  }}</router-link></td>
 						<td>{{ employee.email }}</td>
 						<td>{{ employee.phone }}</td>
 						<td>{{ employee.department }}</td>
+						<td>
+							<div v-if="editEmployee === employee.id">
+								<Dialog header="Edit Employee" :visible.sync="displayBasic" :style="{width: '55vw'}">
+									<form>
+										<input type="text" v-model="employee.name" /> <br>
+										<input type="text" v-model="employee.email" /> <br>
+										<input type="text" v-model="employee.phone" /> <br>
+										<input type="text" v-model="employee.department" /> <br>
+										<input type="text" v-model="employee.avatar" /> <br>
+										<Button v-on:click.prevent="updateEmployee(employee)" label="Save">Save</button>
+									</form>
+									<template #footer>
+								        <Button label="Cancel" icon="pi pi-times" @click="closeBasic" class="p-button-secondary"/>
+								    </template>
+								</Dialog>
+							</div>
+							<div v-else>
+								<Button label="Edit" @click="openBasic" v-on:click="editEmployee=employee.id" /> 
+								<Button label="Delete" v-on:click="deleteEmployee(employee.id, i)" /> <img :src="employee.avatar" alt="avat" class="avat" />
+							</div>
+						</td>
+
 					</tr>
 				</tbody>
 			</table>
@@ -26,17 +72,57 @@
 </template>
 
 <script>
-const dunderUrl = "http://localhost:3000/dunderteam";
+import Button from 'primevue/button';
+import Dialog from 'primevue/dialog';
+
+const dunderUrl = "http://localhost:3000/dunderteam/";
 
 export default {
 	name: 'OurTeam',
     data() {
         return {
+        	displayBasic: false,
+        	fkey: "department",
+        	filterList: ["All", "sales", "hr", "accounting"],
+        	filter: "All",
+        	editEmployee: null,
         	employees: [],
         }
     },
-    
-    mounted() {
+    components: {Button, Dialog},
+   
+    methods: {
+    	deleteEmployee (id) {
+    		fetch(dunderUrl + id, {
+    			method: "DELETE"
+    		})
+    		.then(() => {
+    			this.employees.splice(i, 1);
+    		})
+        },
+        updateEmployee(employee) {
+        	fetch(dunderUrl + employee.id, {
+        		body: JSON.stringify(employee),
+        		method: "PUT",
+        		headers: {
+        			"Content-Type": "application/json",
+        		},
+        	})
+        	.then(() => {
+        		console.log('You Updated an Employee');
+        		this.editEmployee = null;
+        	})
+        },
+        
+        openBasic() {
+            this.displayBasic = true;
+        },
+        closeBasic() {
+            this.displayBasic = false;
+        },
+    },
+
+    created() {
     	fetch(dunderUrl)
     		.then(res => {
     			return res.json();
@@ -49,7 +135,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	
+.avat {
+	border-radius: 50%;
+}	
+.p-button-info {
+	margin: 4px;
+}
 .dunder-app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

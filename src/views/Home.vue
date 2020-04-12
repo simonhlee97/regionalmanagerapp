@@ -1,22 +1,13 @@
 <template>
   <div>
-    <h1>Dunder Mifflin</h1>
+    <h1>Welcome to the Regional Manager App</h1>
   </div>
 </template>
 
 
-
 <script>
-
-
-
 export default {
 	name: 'Home',
-	data() {
-		return {
-			
-		}
-	}
 }
 </script>
 

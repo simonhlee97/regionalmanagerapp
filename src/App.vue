@@ -20,6 +20,8 @@ import Home from './views/Home.vue'
 import OurTeam from './views/OurTeam.vue'
 import Manage from './views/Manage.vue'
 import Employee from '@/components/Employee.vue'
+import AddEmployee from '@/components/AddEmployee.vue'
+
 
 
 
@@ -38,7 +40,8 @@ export default {
       Home,
       Manage,
       OurTeam,
-      Employee
+      Employee,
+      AddEmployee
     }
 }
 </script>
