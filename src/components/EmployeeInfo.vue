@@ -2,10 +2,10 @@
 <template>
   <div class="container">
     <Card>
-    	Name: {{ name }}
-      Email: {{ email }}
-      Phone: {{ phone }}
-      department: {{ department }}
+    	<h2>Name: {{ name }}</h2>
+    	Email: {{ email }}
+    	Phone: {{ phone }}
+    	department: {{ department }}
     </Card>
   </div>
 </template>

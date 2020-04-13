@@ -6,7 +6,7 @@
       {{ user.name }}
     </div>
 
-    <!-- Add component in with props -->
+    <!-- Add Child component in with props -->
     <ContactInfo
       :email-address="user.emailAddress"
       :twitter-handle="user.twitterHandle"
@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import ContactInfo from './Contact.vue';
+import ContactInfo from './Contact.vue';  // CHILD
 export default {
   name: 'ProfilePage',
   components: {

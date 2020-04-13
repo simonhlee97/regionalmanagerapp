@@ -1,4 +1,4 @@
-
+// dependencies: lodash.js and faker
 
 module.exports = function() {
 	var faker = require('faker')

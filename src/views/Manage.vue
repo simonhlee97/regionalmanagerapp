@@ -31,7 +31,19 @@
 				
 				<p>
 					<label for="department">department: </label>
-					<InputText placeholder="department" id="department" v-model='employee.department' type="text" />
+					<select id="department" v-model="employee.department">
+					  <option value="accounting">accounting</option>
+					  <option value="hr">hr</option>
+					  <option value="sales">sales</option>
+					  <option value="warehouse">warehouse</option>
+					</select>
+
+					
+					<Listbox v-model="selectedCity" :options="cities" optionLabel="name" />
+
+
+
+					<!-- <InputText placeholder="department" id="department" v-model='employee.department' type="text" /> -->
 				</p>
 				<br>
 				<br>
@@ -59,6 +71,7 @@
 <script>
 import axios from 'axios'
 import InputText from 'primevue/inputtext';
+import Listbox from 'primevue/listbox';
 import Button from 'primevue/button'
 import Dialog from 'primevue/dialog';
 import OurTeam from './OurTeam.vue';
@@ -68,6 +81,14 @@ const dunderUrl = "http://localhost:3000/dunderteam/";
 export default {
     data() {
         return {
+        	selectedCity: null,
+			cities: [
+				{name: 'New York', code: 'NY'},
+				{name: 'Rome', code: 'RM'},
+				{name: 'London', code: 'LDN'},
+				{name: 'Istanbul', code: 'IST'},
+				{name: 'Paris', code: 'PRS'}
+			],
         	employee: {
         		name: '',
         		email: '',
@@ -97,7 +118,6 @@ export default {
         	.then((res) => {
         		const data = res.data;
         		this.employees.push(data);
-        		console.log('Created a New Employee');
         		this.employee.name = '';
         		this.employee.email = '';
         		this.employee.phone = '';

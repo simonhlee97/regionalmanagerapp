@@ -87,6 +87,14 @@
       "department": "hr",
       "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/prheemo/128.jpg",
       "id": 11
+    },
+    {
+      "name": "Charles Minder",
+      "email": "chuck@dunder.com",
+      "phone": "111-222-9999",
+      "department": "sales",
+      "avatar": "https://s3.amazonaws.com/uifaces/faces/twitter/lepetitogre/128.jpg",
+      "id": 12
     }
   ]
 }

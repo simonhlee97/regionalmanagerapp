@@ -25,7 +25,7 @@
 						<th>Phone</th>
 						<th>Department</th>
 						<th>Avatar</th>
-
+						<th>edit / del</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -41,6 +41,7 @@
 						<td>{{ employee.email }}</td>
 						<td>{{ employee.phone }}</td>
 						<td>{{ employee.department }}</td>
+						<td><img :src="employee.avatar" alt="avat" class="avat" /></td>
 						<td>
 							<div v-if="editEmployee === employee.id">
 								<Dialog header="Edit Employee" :visible.sync="displayBasic" :style="{width: '55vw'}">
@@ -58,8 +59,8 @@
 								</Dialog>
 							</div>
 							<div v-else>
-								<Button label="Edit" @click="openBasic" v-on:click="editEmployee=employee.id" /> 
-								<Button label="Delete" v-on:click="deleteEmployee(employee.id, i)" /> <img :src="employee.avatar" alt="avat" class="avat" />
+								<Button class="team-button p-button-raised p-button-success" label="Edit" @click="openBasic" v-on:click="editEmployee=employee.id" /> 
+								<Button class="team-button p-button-raised p-button-danger" label="Delete" v-on:click="deleteEmployee(employee.id, i)" /> 
 							</div>
 						</td>
 
@@ -136,6 +137,8 @@ export default {
 
 <style lang="scss" scoped>
 .avat {
+	width: 80px;
+	height: auto;
 	border-radius: 50%;
 }	
 .p-button-info {
@@ -155,6 +158,9 @@ li {
 
 h1 {
   color: #a29bfe
+}
+.team-button {
+	margin: 2px;
 }
 
 	table {

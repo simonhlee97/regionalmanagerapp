@@ -1,0 +1,14 @@
+{
+  "sales": [
+    {
+    	"order-id": 1,
+      "order-date": 3-09-2020,
+      "company": "Scranton High School",
+      "contact": "Jimmy Johns",
+      "paper-type": "Fine Art",
+      "unit-price": 100,
+      "quantity": 5,
+      "final-price": 500
+    },
+  ]
+}
