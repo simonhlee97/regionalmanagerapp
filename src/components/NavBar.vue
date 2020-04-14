@@ -1,9 +1,9 @@
 <template>
   <div class="hello">
     <ul>
-    	<li class='nav-item'><router-link to="/">Home</router-link></li>
-    	<li class='nav-item'><router-link to="/about">About</router-link></li>
-    	<li class='nav-item'><router-link to="/manage">Micro Manage</router-link>
+    	<li class='nav-item'><router-link to="regionalmanagerapp/">Home</router-link></li>
+    	<li class='nav-item'><router-link to="regionalmanagerapp//about">About</router-link></li>
+    	<li class='nav-item'><router-link to="regionalmanagerapp//manage">Micro Manage</router-link>
     	</li>
     </ul>
   </div>
