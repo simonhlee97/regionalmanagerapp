@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "generate": "json-server ./db/generate.js",
-    "serve": "json-server --watch ./db/dunder.json & vue-cli-service serve",
-    "build": "vue-cli-service build"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "axios": "^0.19.2",
