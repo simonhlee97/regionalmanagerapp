@@ -30,7 +30,7 @@
 </style>
 
 <script>
-const dunderUrl = "http://localhost:3000/dunderteam";
+const dunderUrl = "https://simonhlee97.github.io/dunder.json";
 import Card from 'primevue/card';
 import SalesData from '@/components/SalesData';
 
