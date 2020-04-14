@@ -15,14 +15,23 @@
 			<th>Quantity</th>
 			<th>Final Price</th>
 		  </tr>
-		  <tr v-for="sale in salesdata">
-		  	<td>{{ sale.orderdate }}</td>
-		  	<td>{{ sale.client }}</td>
-		  	<td>{{ sale.contact }}</td>
-		  	<td>{{ sale.paperType }}</td>
-		  	<td>{{ sale.unitPrice }}</td>
-		  	<td>{{ sale.quantity }}</td>
-		  	<td>{{ sale.finalPrice }}</td>
+		  <tr>
+		  	<td>02-11-2020</td>
+		  	<td>Scranton High School</td>
+		  	<td>Jimmy John</td>
+		  	<td>Photography Paper</td>
+		  	<td>$50</td>
+		  	<td>10</td>
+		  	<td>$500</td>
+		  </tr>
+		  <tr>
+		  	<td>01-21-2020</td>
+		  	<td>Scranton Univ</td>
+		  	<td>John Hopkin</td>
+		  	<td>Art Paper</td>
+		  	<td>$40</td>
+		  	<td>10</td>
+		  	<td>$400</td>
 		  </tr>
 		 </table>
 
@@ -38,27 +47,27 @@
 
 
 <script>
-const salesdata;
+// const salesdata;
 
 
 export default {
 	name: 'SalesData',
 	data () {
 		return {
-			salesdata: []
+			// salesdata: [] 
 		}
 	},
-	mounted() {
-    	fetch(salesdata)
-    		.then(res => {
-    			return res.json();
-    			console.log(res);
-    		})
-    		.then(data => {
-    			this.salesdata = data;
-    			console.log(this.salesdata);
-    		})
-    }
+	// mounted() {
+ //    	fetch(salesdata)
+ //    		.then(res => {
+ //    			return res.json();
+ //    			console.log(res);
+ //    		})
+ //    		.then(data => {
+ //    			this.salesdata = data;
+ //    			console.log(this.salesdata);
+ //    		})
+ //    }
 }
 </script>
 
