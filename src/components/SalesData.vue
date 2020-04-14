@@ -38,11 +38,7 @@
 
 
 <script>
-import DataTable from 'primevue/datatable';
-import Column from 'primevue/column';
-// import ColumnGroup from 'primevue/columngroup';
-
-const salesdata = "http://www.mocky.io/v2/5e95701d2f00006900025046";
+const salesdata;
 
 
 export default {
