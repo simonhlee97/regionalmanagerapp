@@ -75,6 +75,7 @@
 <script>
 import Button from 'primevue/button';
 import Dialog from 'primevue/dialog';
+const mifflin = 'https://simonhlee97.github.io/dunder.json';
 
 const dunderUrl = "https://gist.githubusercontent.com/simonhlee97/8aac48bf9252014ef01eba7f8becb5ca/raw/e3259b68138300dcf104ce7d3e23c3048501fa21/dundermifflin.json";
 
@@ -94,7 +95,7 @@ export default {
    
     methods: {
     	deleteEmployee (id) {
-    		fetch(dunderUrl + id, {
+    		fetch(mifflin + id, {
     			method: "DELETE"
     		})
     		.then(() => {
@@ -102,7 +103,7 @@ export default {
     		})
         },
         updateEmployee(employee) {
-        	fetch(dunderUrl + employee.id, {
+        	fetch(mifflin + employee.id, {
         		body: JSON.stringify(employee),
         		method: "PUT",
         		headers: {
@@ -124,12 +125,14 @@ export default {
     },
 
     created() {
-    	fetch(dunderUrl)
+    	fetch(mifflin)
     		.then(res => {
+    			
     			return res.json();
     		})
     		.then(data => {
     			this.employees = data;
+    			console.log(this.employees);
     		})
     }
 }

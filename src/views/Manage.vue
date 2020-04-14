@@ -36,14 +36,8 @@
 					  <option value="hr">hr</option>
 					  <option value="sales">sales</option>
 					  <option value="warehouse">warehouse</option>
+					  <option value="warehouse">corporate</option>
 					</select>
-
-					
-					<Listbox v-model="selectedCity" :options="cities" optionLabel="name" />
-
-
-
-					<!-- <InputText placeholder="department" id="department" v-model='employee.department' type="text" /> -->
 				</p>
 				<br>
 				<br>
@@ -76,7 +70,10 @@ import Button from 'primevue/button'
 import Dialog from 'primevue/dialog';
 import OurTeam from './OurTeam.vue';
 
+
 const dunderUrl = "https://gist.githubusercontent.com/simonhlee97/8aac48bf9252014ef01eba7f8becb5ca/raw/e3259b68138300dcf104ce7d3e23c3048501fa21/dundermifflin.json";
+
+const mifflin = 'https://github.com/simonhlee97/regionalmanagerapp/blob/master/db/dunder.json';
 
 export default {
     data() {
