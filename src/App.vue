@@ -1,29 +1,23 @@
 <template>
   <div id="app">
-
     <div class="app-container">
-
+    	<h1 id='appname'>Regional-Manager-App</h1>
     	<NavBar />
   		<router-view></router-view>
-		
-			
-
+  		<Footer />
     </div>
-
   </div>
 </template>
 
 <script>
 import NavBar from './components/NavBar.vue'
+import Footer from './components/Footer.vue'
 import About from './views/About.vue'
 import Home from './views/Home.vue'
 import OurTeam from './views/OurTeam.vue'
 import Manage from './views/Manage.vue'
 import Employee from '@/components/Employee.vue'
 import AddEmployee from '@/components/AddEmployee.vue'
-
-
-
 
 export default {
     data() {
@@ -36,6 +30,7 @@ export default {
     },
     components: {
       NavBar,
+      Footer,
       About,
       Home,
       Manage,
@@ -47,6 +42,11 @@ export default {
 </script>
 
 <style scoped>
+#appname {
+	text-transform: uppercase;
+	font-weight: extrabold;
+	font-size: 68px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

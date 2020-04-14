@@ -3,7 +3,7 @@
   <div id="single-employee">
     	<Card v-for="employee in getData($route.params.id)" :key="employee.id">
     		<template slot="header">
-		        {{  employee.name }}
+		        <h1>{{  employee.name }}</h1>
 		    </template>
 
 		    <template slot="title">

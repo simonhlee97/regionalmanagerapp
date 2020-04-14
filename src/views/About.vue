@@ -4,18 +4,27 @@
 
     <img src="../../public/img/1024px-Dunder.png" alt="dunderMifflin" id="dunder">
 
-    <h4>In honor of "The Office," and to celebrate its 15th anniversary.</h4>
+    <h4>In honor of "The Office," and to celebrate its 15th anniversary, I built this employee database management app. I'm fairly certain Michael Scott never had this kind of technology while working at Dunder Mifflin.</h4>
+
+    <h4>"Would I rather be feared or loved? Easy. Both. I want people to be afraid of how much they love me." <br>-- Michael Scott</h4>
+
+    <img id='prisonMike' src="../../public/img/mike2.jpg" alt="Mike" />
   </div>
 </template>
 
-<style lang="scss">
+<style scoped>
 #dunder {
 	height: 360px;
+	width: auto;
+}
+#prisonMike {
+	height: 200px;
 	width: auto;
 }
 
 .about {
 	color: black;
+	padding: 5em;
 }
 </style>
 

@@ -1,13 +1,11 @@
 <template>
   <div class="hello">
     <ul>
-    	<li><router-link to="/">Home</router-link></li>
-    	<li><router-link to="/about">About</router-link></li>
-    	<li><router-link to="/manage">Micro Manage</router-link>
+    	<li class='nav-item'><router-link to="/">Home</router-link></li>
+    	<li class='nav-item'><router-link to="/about">About</router-link></li>
+    	<li class='nav-item'><router-link to="/manage">Micro Manage</router-link>
     	</li>
-
     </ul>
-    
   </div>
 </template>
 
@@ -31,9 +29,14 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 0 7px;
+  color: white;
+  padding: 20px;
+  background-color: black;
 }
 a {
-  color: #42b983;
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 </style>
