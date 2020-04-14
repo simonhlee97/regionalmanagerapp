@@ -76,7 +76,7 @@ import Button from 'primevue/button'
 import Dialog from 'primevue/dialog';
 import OurTeam from './OurTeam.vue';
 
-const dunderUrl = "http://localhost:3000/dunderteam/";
+const dunderUrl = "https://gist.githubusercontent.com/simonhlee97/8aac48bf9252014ef01eba7f8becb5ca/raw/e3259b68138300dcf104ce7d3e23c3048501fa21/dundermifflin.json";
 
 export default {
     data() {
