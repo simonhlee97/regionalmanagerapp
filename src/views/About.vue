@@ -2,7 +2,7 @@
   <div class="about">
     <h1>About</h1>
 
-    <img src="../../public/img/1024px-Dunder.png" alt="dunderMifflin" id="dunder">
+    <img src="../../public/img/dunder.jpg" alt="dunderMifflin" id="dunder">
 
     <h4>In honor of "The Office," and to celebrate its 15th anniversary, I built this employee database management app. I'm fairly certain Michael Scott never had this kind of technology while working at Dunder Mifflin.</h4>
 
@@ -14,8 +14,8 @@
 
 <style scoped>
 #dunder {
-	height: 360px;
-	width: auto;
+	height: auto;
+	width: 50%;
 }
 #prisonMike {
 	height: 200px;

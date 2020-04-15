@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
     <ul>
-    	<li class='nav-item'><router-link to="/home">Home</router-link></li>
+    	<li class='nav-item'><router-link to="/regionalmanagerapp/">Home</router-link></li>
     	<li class='nav-item'><router-link to="/regionalmanagerapp/about">About</router-link></li>
     	<li class='nav-item'><router-link to="/regionalmanagerapp/manage">Micro Manage</router-link>
     	</li>
@@ -29,14 +29,14 @@ ul {
 }
 li {
   display: inline-block;
-  margin: 0 7px;
+  margin: 0 5px;
   color: white;
-  padding: 20px;
+  padding: 10px;
   background-color: black;
 }
 a {
   color: #fff;
-  font-weight: 900;
+  font-weight: bold;
   text-transform: uppercase;
 }
 </style>

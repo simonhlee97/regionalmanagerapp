@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="app-container">
-    	<h1 id='appname'>Regional-Manager-App</h1>
+    	<p id='appname'>Regional-Manager-App</p>
     	<NavBar />
   		<router-view></router-view>
   		<Footer />
@@ -45,7 +45,7 @@ export default {
 #appname {
 	text-transform: uppercase;
 	font-weight: extrabold;
-	font-size: 68px;
+	font-size: 5vw;
 }
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
